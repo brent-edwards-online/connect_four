@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+  <h1>Welcome to connect-4</h1>
+
+  <h2>Please enter board dimensions</h2>
+
+  <form #dimensionsForm="ngForm" (ngsubmit)="letsplay()">
+
+    <div class="form-group"  [ngClass]="{ 'has-error' : !dimension.valid && submitAttempt }">
+        <label class="control-label" for="dimension">Game Dimensions</label>
+        <input class="form-control" type="text" id="dimension" required pattern="{{ dimensionsPattern }}" placeholder="Enter game dimensions">
+        <small [hidden]="!dimension.valid">Dimensions are required</small>
+    </div>
+    <button type="submit">LetsPlay</button>
+  </form>
+</div>
+</div>
