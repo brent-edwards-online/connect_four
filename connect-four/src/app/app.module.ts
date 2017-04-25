@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { routes } from './app.router';
@@ -11,6 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { TemplateDrivenComponent } from './template-driven/template-driven.component';
 import { DataDrivenComponent } from './data-driven/data-driven.component';
 import { FormDemoComponent } from './form-demo/form-demo.component';
+import { SwitchControlComponent } from './switchcontrol/switchcontrol.component';
 
 @NgModule({
   declarations: [
@@ -19,13 +20,15 @@ import { FormDemoComponent } from './form-demo/form-demo.component';
     HomeComponent,
     TemplateDrivenComponent,
     DataDrivenComponent,
-    FormDemoComponent
+    FormDemoComponent,
+    SwitchControlComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    routes
+    routes,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
